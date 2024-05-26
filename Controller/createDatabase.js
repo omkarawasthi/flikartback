@@ -3,6 +3,7 @@ import Product from "../model/product-schema.js";
 
 const createDatabase = async () =>{
     try{
+        await Product.deleteMany({});
         await Product.insertMany(products);
         console.log("Data Imported Successfully");
     }
